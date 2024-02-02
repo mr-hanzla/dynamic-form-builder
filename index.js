@@ -5,8 +5,8 @@ jQuery(($) => {
         defaultFields: [
             {
                 type: "text",
-                required: false,
-                label: "Username",
+                required: true,
+                label: "Email",
                 className: "form-control",
                 name: "text-1706878711842-0",
                 access: false,
@@ -14,8 +14,8 @@ jQuery(($) => {
             },
             {
                 type: "text",
-                required: false,
-                label: "Password My",
+                required: true,
+                label: "Password",
                 className: "form-control",
                 name: "text-1706878711842-1",
                 access: false,
@@ -45,18 +45,20 @@ jQuery(($) => {
         }
     };
 
-    // save 
+    // save form data if screen reloads
     $(window).on('beforeunload', function(){
         saveFormData();
     });
 
     // ======================================================
+    // when form data submits
     $('#submit-btn')[0].addEventListener('click', () => {
         saveFormData();
+        // todo
     });
 
     $('#load-btn')[0].addEventListener('click', () => {
-        loadFormData();
+        // loadFormData();
     });
 
     // ======================================================
